@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		A80708B72BB5DACF00128186 /* TaskList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A80708B52BB5DACF00128186 /* TaskList.xcdatamodeld */; };
 		A80708B92BB5DAD000128186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80708B82BB5DAD000128186 /* Assets.xcassets */; };
 		A80708BC2BB5DAD000128186 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A80708BB2BB5DAD000128186 /* Base */; };
-		A80708C62BB5EAB200128186 /* FilledButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80708C52BB5EAB200128186 /* FilledButtonFactory.swift */; };
+		F8A5D99C2D0F9B6E0085E494 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5D99B2D0F9B6E0085E494 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,12 @@
 		A80708B82BB5DAD000128186 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A80708BB2BB5DAD000128186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A80708BD2BB5DAD000128186 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A80708C52BB5EAB200128186 /* FilledButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonFactory.swift; sourceTree = "<group>"; };
+		F8A5D99B2D0F9B6E0085E494 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F83B13B52D10A78700D6C256 /* Factories */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Factories; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A80708A62BB5DACF00128186 /* Frameworks */ = {
@@ -58,16 +62,49 @@
 		A80708AB2BB5DACF00128186 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				A80708AC2BB5DACF00128186 /* AppDelegate.swift */,
-				A80708AE2BB5DACF00128186 /* SceneDelegate.swift */,
-				A80708B02BB5DACF00128186 /* TaskListViewController.swift */,
-				A80708C52BB5EAB200128186 /* FilledButtonFactory.swift */,
-				A80708B52BB5DACF00128186 /* TaskList.xcdatamodeld */,
+				F83B13B52D10A78700D6C256 /* Factories */,
+				F83B13BD2D10A85300D6C256 /* App */,
+				F83B13BB2D10A81F00D6C256 /* ViewControllers */,
+				F83B13BA2D10A81500D6C256 /* Models */,
 				A80708B82BB5DAD000128186 /* Assets.xcassets */,
 				A80708BA2BB5DAD000128186 /* LaunchScreen.storyboard */,
 				A80708BD2BB5DAD000128186 /* Info.plist */,
+				F83B13BC2D10A84500D6C256 /* Services */,
 			);
 			path = TaskList;
+			sourceTree = "<group>";
+		};
+		F83B13BA2D10A81500D6C256 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A80708B52BB5DACF00128186 /* TaskList.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F83B13BB2D10A81F00D6C256 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A80708B02BB5DACF00128186 /* TaskListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F83B13BC2D10A84500D6C256 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F8A5D99B2D0F9B6E0085E494 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F83B13BD2D10A85300D6C256 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A80708AC2BB5DACF00128186 /* AppDelegate.swift */,
+				A80708AE2BB5DACF00128186 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +121,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F83B13B52D10A78700D6C256 /* Factories */,
 			);
 			name = TaskList;
 			productName = TaskList;
@@ -141,8 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A80708B72BB5DACF00128186 /* TaskList.xcdatamodeld in Sources */,
-				A80708C62BB5EAB200128186 /* FilledButtonFactory.swift in Sources */,
 				A80708B12BB5DACF00128186 /* TaskListViewController.swift in Sources */,
+				F8A5D99C2D0F9B6E0085E494 /* StorageManager.swift in Sources */,
 				A80708AD2BB5DACF00128186 /* AppDelegate.swift in Sources */,
 				A80708AF2BB5DACF00128186 /* SceneDelegate.swift in Sources */,
 			);
