@@ -50,7 +50,7 @@ final class StorageManager {
     }
     
     // MARK: - CRUD
-    func create(title: String, completion: @escaping (ToDoTask) -> Void) {
+    func create(title: String, completion: (ToDoTask) -> Void) {
         let task = ToDoTask(context: context)
         task.title = title
         saveContext()
@@ -63,7 +63,7 @@ final class StorageManager {
         completion()
     }
     
-    func delete(task: ToDoTask, completion: () -> Void) {
+    func delete(task: ToDoTask, completion: @escaping () -> Void) {
         context.delete(task)
         saveContext()
         completion()

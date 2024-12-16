@@ -60,7 +60,7 @@ final class TaskListViewController: UITableViewController {
     private func update(at taskIndex: IndexPath, newTitle: String) {
         let task = taskList[taskIndex.row]
         
-        storage.update(task: task, title: newTitle) {
+        storage.update(task: task, title: newTitle) { [unowned self] in
             tableView.reloadRows(at: [taskIndex], with: .automatic)
         }
         
@@ -69,7 +69,7 @@ final class TaskListViewController: UITableViewController {
     private func delete(at taskIndex: IndexPath) {
         let task = taskList[taskIndex.row]
     
-        storage.delete(task: task) {
+        storage.delete(task: task) { [unowned self] in
             taskList.remove(at: taskIndex.row)
             tableView.deleteRows(at: [taskIndex], with: .automatic)
             tableView.reloadRows(at: [taskIndex], with: .automatic)
